@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lembretes</title>
+    <script defer src="exercicio.js"></script>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+      }
+      body {
+        height: 100vh;
+        width: 100%;
+        text-align: center;
+        background-color: #223333;
+      }
+      .wrapper {
+        height: 600px;
+      }
+      textarea {
+        margin-top: 2rem;
+        border-radius: 20px;
+        padding: 20px 0 0 20px;
+      }
+      textarea:focus {
+        outline: none;
+      }
+      .container {
+        display: flex;
+        margin-top: 2rem;
+        height: 20%;
+        justify-content: space-around;
+      }
+      .wrapper__buttons {
+      }
+      button {
+        width: 150px;
+        /* height: 20px; */
+        border-radius: 20px;
+        padding: 10px;
+        background-color: #0085ff;
+        border: none;
+        color: #fff;
+        cursor: pointer;
+        margin-bottom: 1rem;
+      }
+      button:not(:last-child) {
+        margin-right: 10px;
+      }
+      button:hover {
+        filter: brightness(0.5);
+      }
+      #lembretes {
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="wrapper">
+        <textarea
+          style="resize: none"
+          id="lembretes-area"
+          cols="200"
+          rows="2"
+          placeholder="Digite algum lembrete"
+        ></textarea>
+        <div class="container">
+          <div class="wrapper__buttons">
+            <button onclick="addLembreteFirst()" id="add1">Adicionar 1ª</button>
+            <button onclick="addLembreteLast()" id="add2">
+              Adicionar último
+            </button>
+            <button onclick="removeLembreteFirst()" id="remove1">
+              Remover 1º
+            </button>
+            <button onclick="removeLembreteLast()" id="remove2">
+              Remover último
+            </button>
+          </div>
+        </div>
+        <div id="lembretes"></div>
+      </div>
+    </main>
+  </body>
+</html>
