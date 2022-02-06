@@ -1,7 +1,7 @@
-//Dados primitivos: string, number, boolean, undefined, null, bigint, symbol
-//Dados Referência: array, object, functions
+//Valores primitivos: string, number, boolean, undefined, null, bigint, symbol
+//Valores por Referência: array, object, functions
 
-//Dado Primitivo
+//Valor Primitivo
 /// Ao atribuir o valor dele para alguma variável, é criada uma cópia do valor atual da "variável original" e atribuída à nova variável. Portanto, as alterações na "variável original" não irão refletir no valor da variável criada a partir da original.
 
 let firstName = "maria";
@@ -10,7 +10,7 @@ console.log(firstName, copyName);
 firstName = "marta";
 console.log(firstName, copyName);
 
-//Dado por Referência
+//Valor por Referência
 ///Ao atribuir o valor dela para outra variável, o que ocorre é que as duas variáveis passam a apontar para o mesmo lugar na memória que o valor da variável está. Ou seja, o valor se torna global para as duas variáveis.
 
 let a = [1, 2, 3];
